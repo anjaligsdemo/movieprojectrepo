@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="vh-100" style="background-color: rgba(143, 137, 137, 1);">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-9">
+
+        <h1 class="text-white mb-4" style="text-align: center;" >Update Details</h1>
+
+        </div>
+        <div style="background: rgba(255,255,255,0.5);">
+         <table border="1" style="background: rgba(255,255,255,0.5);">
+            {{ form }}
+         </table>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4" style="text-align: center;" >
+              <button type="submit" class="btn btn-secondary btn-lg">Save</button>
+            </div>
+
+  </div>
+</form>
+</section>
+{% endblock %}

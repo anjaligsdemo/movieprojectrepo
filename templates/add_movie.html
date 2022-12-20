@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="vh-100" style="background-color: rgba(143, 137, 137, 1);">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-9">
+
+        <h1 class="text-white mb-4">Movie Details</h1>
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+                <h6 class="mb-0">Movie name</h6>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input type="text" class="form-control form-control-lg" name="movie_name" />
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+                <h6 class="mb-0">Description </h6>
+              </div>
+              <div class="col-md-9 pe-5">
+                <textarea class="form-control" rows="3" placeholder="Description about movie" name="movie_des"></textarea>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+                <h6 class="mb-0">Date</h6>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input type="text" class="form-control " placeholder="Released Date" name="movie_released_year" />
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+                <h6 class="mb-0">Upload Image</h6>
+              </div>
+              <div class="col-md-9 pe-5">
+                <input class="form-control form-control-lg" id="formFileLg" type="file" name="movie_banner" />
+                <div class="small text-muted mt-2">Upload banner or poster of the movie</div>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="px-5 py-4">
+              <button type="submit" class="btn btn-secondary btn-lg">Save</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+</section>
+{% endblock %}

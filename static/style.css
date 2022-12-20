@@ -1,0 +1,10 @@
+body{
+background-color:rgba(143, 137, 137, 1);
+}
+.newsletter_input {
+            background: rgba(255,255,255,0.5);
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+.errorlist {display:none;}
